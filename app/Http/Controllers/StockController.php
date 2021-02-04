@@ -9,26 +9,17 @@ use App\Models\Shop;
 
 class StockController extends Controller
 {
-    // public function index ($id){
-    //     $products = Product::all();
-    //     $stocks = Stock::all();
-
-
-    //     return view ('products.stocks', [
-    //         'stocks'=>$stocks[$id]
-    //     ]);
-
-    //     return view ('products.stocks', [
-    //         'stocks'=>$sorts[$sort]
-    //     ]);
-    // }
-
     public function index($product_id){
 
         $shops = Stock::where('product_id',$product_id)->get();//this will return array containing shop_id and their corresponding stocks of the product
-       
-        
-        //to do: store the shop_id and retrieve shop in shop table where shop_id = shop_id from $shops[array]
+
+        $array = [];
+        // $product_id = array_column($Array_var,'product_id');
+        // print_r($product_id);
+        //to do: store the shop_id and
+        //use shop table model
+
+        // retrieve shop in shop table where shop_id = shop_id from $shops[array]
 
         //my approach: nested loop? or data relationships problem 
 
